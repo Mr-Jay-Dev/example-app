@@ -1,0 +1,43 @@
+<?php
+
+// App/Interfaces/RegistrationRepositoryInterface.php
+
+namespace App\Interfaces;
+
+interface RegistartionRepositoryInterface
+{
+    public function create(array $data);
+    public function login(array $credentials);
+}
+
+
+
+
+<?php
+
+namespace App\Repositories;
+
+use App\Models\User;
+use App\Interfaces\RegistartionRepositoryInterface;
+
+class RegistrationRepository implements RegistartionRepositoryInterface
+{
+    public function create(array $data)
+    {
+        // Ensure to hash the password before storing
+        $data['password'] = bcrypt($data['password']);
+
+        return User::create($data);
+    }
+
+    public function login(array $credentials)
+    {
+        // Implement your login logic here
+        // Example: Authenticate user using Laravel's Auth::attempt
+        if (auth()->attempt($credentials)) {
+            return true;
+        }
+        return false;
+    }
+}
+
