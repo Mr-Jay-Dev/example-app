@@ -2,9 +2,11 @@
 
 namespace App\Providers;
 
+use App\Interfaces\CampaignRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 use App\Interfaces\DataRepositoryInterface;
 use App\Interfaces\MainRepositoryInterface;
+use App\Repositories\CampaignRepository;
 use App\Repositories\DataRepository;
 use App\Repositories\MainRepository;
 
@@ -23,6 +25,11 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             MainRepositoryInterface::class,
             MainRepository::class
+        );
+
+        $this->app->bind(
+            CampaignRepositoryInterface::class,
+            CampaignRepository::class
         );
     }
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CampaignController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserForm;
 use App\Http\Controllers\UserController;
@@ -39,6 +40,18 @@ Route::get('/dataFetch', [UserController::class, 'dataFetch'])->name('dataFetch'
 
 // Route for displaying the edit form
 Route::get('/edit/{id}', [UserController::class, 'edit'])->name('edit');
+
+
+
+
+// Route::get('/upload', [CampaignController::class, 'store'])->name('upload');
+
+
+Route::post('/campaigns/upload-avatar', [CampaignController::class, 'store'])->name('campaigns.upload-avatar');
+
+Route::get('/listing', [CampaignController::class, 'index'])->name('listing');
+
+Route::get('/edit/{id}', [CampaignController::class, 'edit'])->name('edit-listing');
 
 
 // Route for handling form submission to add user data

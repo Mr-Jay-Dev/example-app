@@ -1469,80 +1469,6 @@ License: For each use you must have a valid license purchased only from above li
 						<div class="app-sidebar-navs flex-column-fluid py-6" id="kt_app_sidebar_navs">
 							<div id="kt_app_sidebar_navs_wrappers" class="app-sidebar-wrapper hover-scroll-y my-2" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_header" data-kt-scroll-wrappers="#kt_app_sidebar_navs" data-kt-scroll-offset="5px">
 								<!--begin::Teams-->
-								<div class="app-sidebar-menu-secondary menu menu-rounded menu-column mb-6">
-									<!--begin::Heading-->
-									<div class="menu-item mb-2">
-										<div class="menu-heading text-uppercase fs-7 fw-bold">Teams</div>
-										<!--begin::Separator-->
-										<div class="app-sidebar-separator separator"></div>
-										<!--end::Separator-->
-									</div>
-									<!--end::Heading-->
-									<!--begin::Menu Item-->
-									<div class="menu-item">
-										<!--begin::Menu link-->
-										<a class="menu-link active" href="../../demo38/dist/apps/projects/project.html">
-											<!--begin::Bullet-->
-											<span class="menu-icon">
-												<span class="bullet bullet-dot bg-success"></span>
-											</span>
-											<!--end::Bullet-->
-											<!--begin::Title-->
-											<span class="menu-title">AudioEngine</span>
-											<!--end::Title-->
-										</a>
-										<!--end::Menu link-->
-									</div>
-									<!--end::Menu Item-->
-									<!--begin::Menu Item-->
-									<div class="menu-item">
-										<!--begin::Menu link-->
-										<a class="menu-link" href="../../demo38/dist/apps/projects/activity.html">
-											<!--begin::Bullet-->
-											<span class="menu-icon">
-												<span class="bullet bullet-dot bg-danger"></span>
-											</span>
-											<!--end::Bullet-->
-											<!--begin::Title-->
-											<span class="menu-title">Schipol Extranet</span>
-											<!--end::Title-->
-										</a>
-										<!--end::Menu link-->
-									</div>
-									<!--end::Menu Item-->
-									<!--begin::Menu Item-->
-									<div class="menu-item">
-										<!--begin::Menu link-->
-										<a class="menu-link" href="../../demo38/dist/apps/projects/files.html">
-											<!--begin::Icon-->
-											<span class="menu-icon">
-												<i class="ki-outline ki-lock-2 fs-2"></i>
-											</span>
-											<!--end::Icon-->
-											<!--begin::Title-->
-											<span class="menu-title">ABN AMBRO</span>
-											<!--end::Title-->
-										</a>
-										<!--end::Menu link-->
-									</div>
-									<!--end::Menu Item-->
-									<!--begin::Menu Item-->
-									<div class="menu-item">
-										<!--begin::Menu link-->
-										<a class="menu-link" href="../../demo38/dist/apps/projects/settings.html">
-											<!--begin::Icon-->
-											<span class="menu-icon">
-												<i class="ki-outline ki-lock-2 fs-2"></i>
-											</span>
-											<!--end::Icon-->
-											<!--begin::Title-->
-											<span class="menu-title">NS Mobile App</span>
-											<!--end::Title-->
-										</a>
-										<!--end::Menu link-->
-									</div>
-									<!--end::Menu Item-->
-								</div>
 								<!--end::Teams-->
 								<!--begin::Sidebar menu-->
 								<div id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false" class="app-sidebar-menu-primary menu menu-column menu-rounded menu-sub-indention menu-state-bullet-primary">
@@ -1606,11 +1532,11 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin:Menu item-->
 											<div class="menu-item">
 												<!--begin:Menu link-->
-												<a class="menu-link" href="../../demo38/dist/dashboards/online-courses.html">
+												<a class="menu-link" href="{{ route('listing') }}">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
-													<span class="menu-title">Online Courses</span>
+													<span class="menu-title">Listing</span>
 												</a>
 												<!--end:Menu link-->
 											</div>

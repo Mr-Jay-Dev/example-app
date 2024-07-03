@@ -45,7 +45,7 @@ class UserController extends Controller
         $this->dataRepository->create($data);
 
         toastr()->success('User data added successfully.');
-        return redirect()->route('adduser')->with('success', 'User data added successfully.');
+        return redirect()->route('dataFetch')->with('success', 'User data added successfully.');
     }
 
     public function dataFetch()
@@ -65,30 +65,38 @@ class UserController extends Controller
 
 
     public function update(Request $request, $id)
-    {
-        $request->validate([
-            'firstname' => 'required',
-            'lastname' => 'required',
-            'country' => 'required',
-            'address1' => 'required',
-            'address2' => 'nullable',
-            'city' => 'required',
-            'state' => 'required',
-            'postcode' => 'required',
-        ]);
+{
+    // Validate incoming request data
+    $request->validate([
+        'firstname' => 'required',
+        'lastname' => 'required',
+        'country' => 'required',
+        'address1' => 'required',
+        'address2' => 'nullable',
+        'city' => 'required',
+        'state' => 'required',
+        'postcode' => 'required',
+    ]);
 
-        $data = $request->only([
-            'firstname', 'lastname', 'country', 'address1', 'address2', 'city', 'state', 'postcode', 'billing'
-        ]);
+    // Extract only the allowed fields from the request
+    $data = $request->only([
+        'firstname', 'lastname', 'country', 'address1', 'address2', 'city', 'state', 'postcode', 'billing'
+    ]);
 
-        $this->dataRepository->update($data, $id);
+    // Assuming $this->dataRepository refers to a repository/service responsible for data operations
+    // Update the record in the database using the extracted data and the provided $id
+    $this->dataRepository->update($data, $id);
 
-        return redirect('dataFetch')->with('status', 'Data Updated Successfully');
-    }
+    toastr()->success('User data update successfully.');
+    // Redirect back to a route named 'dataFetch' with a success message
+    return redirect('dataFetch')->with('status', 'Data Updated Successfully');
+}
+
 
     public function delete($id)
     {
         $this->dataRepository->delete($id);
+        toastr()->success('User data delete successfully.');
         return redirect()->route('dataFetch')->with('success', 'User data deleted successfully.');
     }
     

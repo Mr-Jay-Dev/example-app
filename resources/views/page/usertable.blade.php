@@ -3021,8 +3021,8 @@
                     </div>
                     <!--end::Nav-->
                     <!--begin::Form-->
-                    <form class="mx-auto w-100 mw-600px pt-15 pb-10" novalidate="novalidate"
-                        id="kt_modal_create_campaign_stepper_form">
+                    <form action="{{ route('campaigns.upload-avatar') }}" method="POST" enctype="multipart/form-data"  class="mx-auto w-100 mw-600px pt-15 pb-10" novalidate="novalidate">
+                        @csrf 
                         <!--begin::Step 1-->
                         <div class="current" data-kt-stepper-element="content">
                             <!--begin::Wrapper-->
@@ -3232,7 +3232,7 @@
                         </div>
                         <!--end::Step 1-->
                         <!--begin::Step 2-->
-                        <div data-kt-stepper-element="content">
+                        {{-- <div data-kt-stepper-element="content">
                             <!--begin::Wrapper-->
                             <div class="w-100">
                                 <!--begin::Heading-->
@@ -3472,10 +3472,10 @@
                                 <!--end::Input group-->
                             </div>
                             <!--end::Wrapper-->
-                        </div>
+                        </div> --}}
                         <!--end::Step 2-->
                         <!--begin::Step 3-->
-                        <div data-kt-stepper-element="content">
+                        {{-- <div data-kt-stepper-element="content">
                             <!--begin::Wrapper-->
                             <div class="w-100">
                                 <!--begin::Heading-->
@@ -3610,10 +3610,10 @@
                                 <!--end::Input group-->
                             </div>
                             <!--end::Wrapper-->
-                        </div>
+                        </div> --}}
                         <!--end::Step 3-->
                         <!--begin::Step 4-->
-                        <div data-kt-stepper-element="content">
+                        {{-- <div data-kt-stepper-element="content">
                             <!--begin::Wrapper-->
                             <div class="w-100">
                                 <!--begin::Heading-->
@@ -3687,10 +3687,10 @@
                                 <!--end::Input group-->
                             </div>
                             <!--end::Wrapper-->
-                        </div>
+                        </div> --}}
                         <!--end::Step 4-->
                         <!--begin::Step 5-->
-                        <div data-kt-stepper-element="content">
+                        {{-- <div data-kt-stepper-element="content">
                             <!--begin::Wrapper-->
                             <div class="w-100">
                                 <!--begin::Heading-->
@@ -3720,30 +3720,28 @@
                                 </div>
                                 <!--end::Illustration-->
                             </div>
-                        </div>
+                        </div> --}}
                         <!--end::Step 5-->
                         <!--begin::Actions-->
                         <div class="d-flex flex-stack pt-10">
                             <!--begin::Wrapper-->
-                            <div class="me-2">
+                            {{-- <div class="me-2">
                                 <button type="button" class="btn btn-lg btn-light-primary me-3"
                                     data-kt-stepper-action="previous">
                                     <i class="ki-outline ki-arrow-left fs-3 me-1"></i>Back</button>
-                            </div>
+                            </div> --}}
                             <!--end::Wrapper-->
                             <!--begin::Wrapper-->
                             <div>
-                                <button type="button" class="btn btn-lg btn-primary"
+                                {{-- <button type="button" class="btn btn-lg btn-primary"
                                     data-kt-stepper-action="submit">
                                     <span class="indicator-label">Submit
                                         <i class="ki-outline ki-arrow-right fs-3 ms-2 me-0"></i></span>
                                     <span class="indicator-progress">Please wait...
                                         <span
                                             class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-                                </button>
-                                <button type="button" class="btn btn-lg btn-primary"
-                                    data-kt-stepper-action="next">Continue
-                                    <i class="ki-outline ki-arrow-right fs-3 ms-1 me-0"></i></button>
+                                </button> --}}
+                                <button type="submit" class="btn btn-lg btn-primary">Submit</button>
                             </div>
                             <!--end::Wrapper-->
                         </div>
@@ -5256,7 +5254,7 @@
 <script src="js/custom/widgets.js"></script>
 <script src="js/custom/apps/chat/chat.js"></script>
 <script src="js/custom/utilities/modals/upgrade-plan.js"></script>
-<script src="js/custom/utilities/modals/create-campaign.js"></script>
+{{-- <script src="js/custom/utilities/modals/create-campaign.js"></script> --}}
 <script src="js/custom/utilities/modals/users-search.js"></script>
 <!--end::Custom Javascript-->
 <!--end::Javascript-->

@@ -25,7 +25,7 @@ class UserRegistration extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'password' => 'required',
+            'name' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6',
         ]);
